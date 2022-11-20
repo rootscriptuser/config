@@ -1,0 +1,24 @@
+echo $(</etc/os-release)
+pandoc --list-highlight-styles
+pandoc --highlight-style=zenburn -o~/Desktop/baba.pdf ~/Desktop/bash.md -V geometry:margin=5mm
+echo 10..55..5%
+grep "o$" tx.txt 
+touch {fruit,potato,banana}
+touch file_{1..30..2}
+ls | wc -w
+ls | more
+cat try.txt | cut -d " " -f 5
+printenv | more
+alias
+for i in potato; do  echo $i ; done
+ls -l | wc -l
+pandoc  -V theme=Berlin --highlight-style=zenburn -t beamer bash.md -o bash.pdf
+pandoc -V geometry:margin=5mm -V theme=Berlin --highlight-style=zenburn -t beamer bash.md -o bash.pdf
+today=$(date +"%Y.%m.%d - %H:%M")
+python3 -m venv .
+. bin/activate
+netstat -uno
+netstat --tcp -n
+lsusb -s 5
+sudo systemd-resolve --statistics
+sudo systemd-resolve --flush-caches 
