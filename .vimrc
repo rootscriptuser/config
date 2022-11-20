@@ -9,7 +9,7 @@ syntax on
 let mapleader=" "
 set autoread " if file is changed from outside
 set exrc
-set incsearc
+set incsearch
 set noshowmode
 set signcolumn=yes " column left of nu
 colorscheme industry
@@ -18,7 +18,7 @@ colorscheme industry
 
 set tabstop=4
 set shiftwidth=4
-set softtab=4
+set softtabstop=4
 set expandtab
 set relativenumber " _ j k
 set clipboard=unnamed
