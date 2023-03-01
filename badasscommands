@@ -22,3 +22,6 @@ netstat --tcp -n
 lsusb -s 5
 sudo systemd-resolve --statistics
 sudo systemd-resolve --flush-caches 
+sha256sum myfile.iso
+lsblk
+sudo dd bs=4M if=path/to/input.iso of=/dev/sd<?> conv=fdatasync  status=progress
