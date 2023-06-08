@@ -25,3 +25,13 @@ sudo systemd-resolve --flush-caches
 sha256sum myfile.iso
 lsblk
 sudo dd bs=4M if=path/to/input.iso of=/dev/sd<?> conv=fdatasync  status=progress
+ss -t
+ss -u
+ss -4
+yt-dlp -f best -a list.txt
+df -h
+sudo blkid
+sudo fdisk -l
+ls --hide=*.mp4*
+find  . -name .DS_store -type  f  -delete
+find /dir/to/search/ -type f -name "FILETOFIND-regex" -exec rm {} \;
