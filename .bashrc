@@ -1,6 +1,8 @@
-set -o vi
-
+# add to enf of .bashrc profile
+# set -o vi
+# alias ll=ls -la
+# save last (epic)command
 slc () {
- "^\s\t" ~/commands 
-
+ tail -1 ~/.bash_history >> ~/commands.txt;
 }
+
