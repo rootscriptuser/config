@@ -1,37 +1,50 @@
 echo $(</etc/os-release)
+
 pandoc --list-highlight-styles
 pandoc --highlight-style=zenburn -o~/Desktop/baba.pdf ~/Desktop/bash.md -V geometry:margin=5mm
-echo 10..55..5%
+pandoc  -V theme=Berlin --highlight-style=zenburn -t beamer bash.md -o bash.pdf
+pandoc -V geometry:margin=5mm -V theme=Berlin --highlight-style=zenburn -t beamer bash.md -o bash.pdf
+
 grep "o$" tx.txt 
+echo 10..55..5%
+cat try.txt | cut -d " " -f 5
+
 touch {fruit,potato,banana}
 touch file_{1..30..2}
 ls | wc -w
 ls | more
-cat try.txt | cut -d " " -f 5
-printenv | more
-alias
-for i in potato; do  echo $i ; done
-ls -l | wc -l
-pandoc  -V theme=Berlin --highlight-style=zenburn -t beamer bash.md -o bash.pdf
-pandoc -V geometry:margin=5mm -V theme=Berlin --highlight-style=zenburn -t beamer bash.md -o bash.pdf
-today=$(date +"%Y.%m.%d - %H:%M")
-python3 -m venv .
-. bin/activate
-netstat -uno
-netstat --tcp -n
 lsusb -s 5
-sudo systemd-resolve --statistics
-sudo systemd-resolve --flush-caches 
-sha256sum myfile.iso
-lsblk
-sudo dd bs=4M if=path/to/input.iso of=/dev/sd<?> conv=fdatasync  status=progress
-ss -t
-ss -u
-ss -4
-yt-dlp -f best -a list.txt
 df -h
 sudo blkid
 sudo fdisk -l
 ls --hide=*.mp4*
 find  . -name .DS_store -type  f  -delete
 find /dir/to/search/ -type f -name "FILETOFIND-regex" -exec rm {} \;
+ls | grep -xv "file.txt" | xargs rm
+
+printenv | more
+alias
+for i in potato; do  echo $i ; done
+ls -l | wc -l
+
+
+
+today=$(date +"%Y.%m.%d - %H:%M")
+
+python3 -m venv .
+. bin/activate
+
+netstat -uno
+netstat --tcp -n
+ss -t
+ss -u
+ss -4
+
+sudo systemd-resolve --statistics
+sudo systemd-resolve --flush-caches 
+
+sha256sum myfile.iso
+lsblk
+sudo dd bs=4M if=path/to/input.iso of=/dev/sd<?> conv=fdatasync  status=progress
+
+yt-dlp -f best -a list.txt
