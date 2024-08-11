@@ -10,6 +10,7 @@ slc () {
  fc -ln -1 | sed -e 's/`[ \t]*//' >> ~/commands ;
 }
 
+setxkbmap -option caps:swapescape
 set -o vi
 
 NO_FORMAT="\033[0m"
